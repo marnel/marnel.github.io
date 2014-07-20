@@ -9,7 +9,7 @@
 <div class="navbar-collapse collapse navbar-responsive-collapse" data-ng-controller="HeaderController">
 
     <form class="navbar-form navbar-right">
-        <input type="text" class="form-control col-lg-8" placeholder="Search">
+        <input type="text" id="siteSearchValue" class="form-control col-lg-8" placeholder="Search" data-ng-model="search" data-ng-change="runSearch()">
     </form>
     <ul class="nav navbar-nav navbar-right">
         <li data-ng-repeat="item in menus" ui-route="/{[{item.link}]}" ui-sref-active="active">

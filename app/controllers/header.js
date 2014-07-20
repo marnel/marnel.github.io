@@ -24,6 +24,9 @@ angular.module('myApp').controller('HeaderController', ['$scope', '$rootScope',
 
         $scope.isCollapsed = false;
 
-
+        $scope.runSearch = function(){
+            alert('Search coming soon...');
+            $('#siteSearchValue').val('');
+        };
     }
 ]);

@@ -62,20 +62,34 @@ body > section.content > section.container{
     margin: 0, 200px, 0, 200px;
 }
 
-.clip-circle
-{
-    border-radius:50%;
+/*the exact same class as earlier*/
+.clip-circle{
+    background:url('/img/MeLinkedin.png') no-repeat;
+    background-size:292px 358px;
+    /*background-position:-160px 0px;*/
+    height:292px;
+    width:358px;
+    /*border-radius:50%;*/
     overflow:hidden;
     margin:auto;
-    width: 100px;
-    height:100px;
 }
 
 /*new specific class for box shadow*/
-.box-shad
-{
+.box-shad{
     box-shadow:
     0 0 150px 20px #000 inset;
+}
+
+/*create another class overriding the earlier classes*/
+.smallerClip {
+    /*these are the override-ers*/
+    background-size: 100px 125px;
+    /*background-position: -80px 0px;*/
+    height: 100px;
+    width: 100px;
+    /*smaller box shadow*/
+    box-shadow: 0 0 60px 3px #000 inset;
+    margin-right: 7px;
 }
 
 
