@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Building A Website With Hexo.io | MichaelArnel.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="In my last article, I wrote about my personal experiences getting MichaelArnel.com up and running. This article covers using a Static Site Generator (SSG) to build your very own website. Static Site G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building A Website With Hexo.io">
+<meta property="og:url" content="http://michaelarnel.com/2015/03/01/Building-A-Website-With-Hexo-io/">
+<meta property="og:site_name" content="MichaelArnel.com">
+<meta property="og:description" content="In my last article, I wrote about my personal experiences getting MichaelArnel.com up and running. This article covers using a Static Site Generator (SSG) to build your very own website. Static Site G">
+<meta property="og:image" content="/2015/02/28/Building-A-Website-With-Hexo-io/logo.png">
+<meta property="og:image" content="/2015/02/28/Building-A-Website-With-Hexo-io/new-blog-site.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building A Website With Hexo.io">
+<meta name="twitter:description" content="In my last article, I wrote about my personal experiences getting MichaelArnel.com up and running. This article covers using a Static Site Generator (SSG) to build your very own website. Static Site G">
+
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href='//fonts.useso.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Arizonia:400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css">
+  <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-60025564-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div class="container">
+      <div class="container-inner">
+        <div id="header-title">
+          <h1 class="logo-wrap">
+            <!--<a href="/" class="logo">{ Michael Arnel }</a>-->
+            <a href="/" class="logo">{ Michael Arnel }</a>
+          </h1>
+          
+            <h2 class="subtitle-wrap">
+              <p class="subtitle">Developer, Technolgy Enthusiast, Family Man</p>
+            </h2>
+          
+        </div>
+        <div id="header-inner" class="nav-container">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <div class="nav-container-inner">
+            <ul id="main-nav">
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/">Home</a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/about/index.html">About</a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/resume/index.html">Resume</a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/contact/index.html">Contact</a></li>
+              
+            </ul>
+            <nav id="sub-nav">
+              <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="q" value="site:http://michaelarnel.com"></form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <div class="main-body container-inner">
+        <div class="main-body-inner">
+          <section id="main">
+            <div class="main-body-header">
+
+              <h1 class="header"><a class="page-title-link" href="/categories/Web-Development/">Web Development</a></h1>
+            </div>
+            <div class="main-body-content">
+              
+  <article id="post-Building-A-Website-With-Hexo-io" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
+      
+        <header class="article-header">
+          
+  
+    <h1 class="article-title" itemprop="name">
+      Building A Website With Hexo.io
+    </h1>
+  
+
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/03/01/Building-A-Website-With-Hexo-io/" class="article-date">
+  <time datetime="2015-03-01T23:32:45.000Z" itemprop="datePublished">Mar 1 2015</time>
+</a>
+      </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p>In my last article, I wrote about my personal experiences getting MichaelArnel.com up and running. This article covers using a Static Site Generator (SSG) to build your very own website. Static Site Generators are tools that take content in one format, such as Markdown, and transforms that content into another format, usually HTML and lays out pages so that the look and feel is consistent across the entire site.</p>
+<h4 id="Why_use_a_Static_Site_Generator?">Why use a Static Site Generator?</h4>
+<p>There are many benefits to using SSG’s to build and maintain your site.</p>
+<ul>
+<li>Sites built using SSGs are static html, js, and css files which means it can be hosted on any platform by any webserver of your choice.</li>
+<li>Because the content is made up of flat text files, static sites are easy to version with source control tools like GIT.</li>
+<li>There is no server side code executing or database interactivity so static sites are much more secure and generally free from exploits.</li>
+<li>Static sites are extremely fast!!!</li>
+</ul>
+<p>Once you’ve decided to use a SSG to build your website with, it’s time to choose a SSG to use.  There are many tools out there for you to choose from.  It’s important to choose one that’s built on a platform your comfortable developing on, for example javascript, ruby, php, etc.  This is important because you want to be able to contribute to the project, or possibly fix bugs that might be impacting your site.  For the purposes of this tutorial i’ve chosen to use <a href="http://hexo.io" target="_blank" rel="external">Hexo.io</a> which is built using JavaScript on Node.js  Hexo is also the same SSG I’ve used to build MichaelArnel.com</p>
+<p><img src="/2015/02/28/Building-A-Website-With-Hexo-io/logo.png"></p>
+<p>This tutorial makes the assumption that you’re already familiar with NodeJS and already have it installed to your system.  If you need to install NodeJS please head on over to <a href="http://nodejs.org/" target="_blank" rel="external">the node.js homepage</a> and follow the instructions there.  Once complete continue back over here.</p>
+<h2 id="Hexo_Quick_Setup:">Hexo Quick Setup:</h2>
+<p>In order to install Hexo, you’ll need to open up the terminal or command line.  We’re going to use Node Package Manager (NPM) to install the hexo package globally.  Run the following command now:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-<span class="keyword">cli</span></div></pre></td></tr></table></figure>
+
+<p>Now that the hexo package is installed globally, use the terminal and navigate to the folder you want to create your website at.  Let’s assume we wanted to build a blog, to get started we would run the command below to initialize a hexo website.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">init</span> <span class="type">Blog</span></div></pre></td></tr></table></figure>
+
+<p>After this command is run, a skeleton project is stubbed out and a new project folder called “Blog” is created, containing the files generated by Hexo.  Before we can fire up the server and see the site in action, we’ll have to run an npm command to install all the project dependencies. Switch to the new directory created by hexo and run the npm command below.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> Blog</div><div class="line">npm install</div></pre></td></tr></table></figure>
+
+<p>At this point all the dependencies should be installed and your new Blog website is ready for you to run and explore. Run the following command to start the webserver.  After running the command you should see output by hexo letting you know that it’s running and how to stop it.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo server</div><div class="line">   &gt;&gt;Hexo is running <span class="keyword">at</span> <span class="keyword">http</span>://localhost:<span class="number">4000</span>/. Press Ctrl+C <span class="built_in">to</span> stop.</div></pre></td></tr></table></figure>
+
+<p>Your brand new Blog website is up and running now!  Open up a web browser and navigate to <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>.  You should see something simular to the image below in your browser.<br><img src="/2015/02/28/Building-A-Website-With-Hexo-io/new-blog-site.png"><br><strong>Pretty Cool!</strong> In less than 5 minutes you have a fully functional website up and running and all you’ve done is run a few commands from the command line.  Let’s start adding some content so we can customize it. Before we being let’s take a look at the directory contents created by hexo.  You should see something similar to the structure below.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line"><span class="string">|   ├── _drafts</span></div><div class="line"><span class="string">|   └── _posts</span></div><div class="line">└── themes</div></pre></td></tr></table></figure>
+
+<blockquote class="pullquote ">
+
+<p>Basic Configurations</p>
+</blockquote>
+
+
+<p>Inside the new project directory created, find and open the file <em>_config.yml</em>  This file is the configuration that drives the static site that’s generated by hexo.  It controls things about your site like title, author, url, paging settings and much much more.  Let’s start with some simple changes and modify the site configuration region to reflect the blog we’re building.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor"># Site</span></div><div class="line"><span class="label">title:</span> My Cool New Blog</div><div class="line"><span class="label">subtitle:</span> Blogging cool stuff!</div><div class="line"><span class="label">description:</span></div><div class="line"><span class="label">author:</span> &lt;Your Name Here&gt;</div><div class="line"><span class="label">email:</span> &lt;Your Email Here&gt;</div><div class="line"><span class="label">language:</span> English</div><div class="line"></div><div class="line"><span class="preprocessor"># URL</span></div><div class="line"><span class="preprocessor">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="label">url:</span> http://mycoolblog.com</div><div class="line"><span class="label">root:</span> /</div></pre></td></tr></table></figure>
+
+<p>For now this is all we’ll modify in the <em>_config.yml</em>, save the file and close it.  To learn more about what the rest of settings in the <em>_config.yml</em> do, visit <a href="http://hexo.io/docs/" target="_blank" rel="external">http://hexo.io/docs/</a> and explore the documentation.  The changes you’ve made to the *_config.yml won’t take place until you stop and restart the hexo server.  Use the command line and stop and restart the server now. Refresh the browser and take note of the changes.  You should now see the blog title and subtitle displayed in the page header!</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Press Ctrl+C <span class="keyword">to</span> <span class="keyword">stop</span></div><div class="line">hexo <span class="built_in">server</span></div></pre></td></tr></table></figure>
+
+<blockquote class="pullquote ">
+
+<p>Writing Some Content</p>
+</blockquote>
+
+
+<p>Writing content for your new blog is just as easy.  The first thing we need to do is tell Hexo to provision a new article.  This is done by going back to the command line and running the following command:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> Post MyFirstEntry</div></pre></td></tr></table></figure>
+
+<p><em>Note: There are 3 different types of content stubs you can generate out of the box with hexo.  The default is a Post, but you can also choose from Draft and Page documents as well.</em></p>
+<p>Hexo now generates a new file inside the _posts directory under the source folder at the root of your project.  Navigate to the _posts directory and you should now see a new file titled <em>MyFirstEntry.md</em>  This is a special file type known as Markdown.  Markdown is a simple to use text format for non-programming types to write in. That text is taken and then read in by a processor and converted to HTML.  This makes it super easy to quickly write down your thoughts and include things such as tables, page headings, blockquotes and more without using a bit of HTML Markup. <strong>COOL!</strong></p>
+<p>Play around writing some content and save the file. If you didn’t stop the server (Ctrl+C) in the previous step, when we created the new post, do so now, then restart.  We do this so that hexo can rebuild your site including the new content you’ve just added. Refresh the web browser and you should now see a new article linking to the content you just wrote.  Notice all the other cool things hexo did for you while generating the site. It’s automatically set up links to the article based on any categories and or tags you’ve specified in the <em>MyFirstEntry.md</em> file.  This is what makes your site static. Traditionally all of this processing would by done dynamically via server-side code at runtime.</p>
+<p>*Note: After the file is generated by hexo and the server is restarted, any changes you make to your content files are automatically picked up by the running hexo server.  This makes it easy to refresh and browser and quickly see the changes you’ve made while you work.</p>
+<blockquote class="pullquote ">
+
+<p>Generating Your Site for Deployment</p>
+</blockquote>
+
+
+<p>This is just the tip of the iceburg of what you can do with Hexo, but for the moment you’re but just one small step from being able to publish your website so that the rest of the world can see your work.  Stop the hexo server by going back to the command line and hitting Ctrl+C.  Run the following commands to build out your website for deployment:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo <span class="keyword">generate</span></div></pre></td></tr></table></figure>
+
+<p>The first command (<em>hexo clean</em>) run’s cleanup by hexo on the files it generates internally to track the content that makes up your website.  The second command (<em>hexo generate</em>) actually builds out the website and creates the files in a new folder called public in the root of your project folder.  This folder contains everything you need to copy your website to a webserver so that it can be hosted on the internet. That’s all there is to it, dust off your hands and pat yourself on the back. You’ve now just built out your first website using Hexo, and in less than an hour!</p>
+<blockquote class="pullquote ">
+
+<p>What’s Next?</p>
+</blockquote>
+
+
+<p>Time for you to go off and explore how you can use the rest of the Hexo tool to build your website. Check out the <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for all the details you need to become a master of Hexo.  You might also want to take a look at the custom themes available, that others have built and shared to give your site a different look and feel.</p>
+<p>In Part 3 of this series we’ll explore how to manage your site using tools like GIT for source control, Grunt.js to automate certain aspects of the development of your site, and finally how to use Github to publish your source files and host your static site for free!</p>
+<p><span class="pull-left"><a href="/2015/02/21/Hello-World/">Prev: Hello World</a></span></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://michaelarnel.com/2015/03/01/Building-A-Website-With-Hexo-io/" data-id="r7ewh4ht47si7edh" class="article-share-link">Share</a>
+        
+          <a href="http://michaelarnel.com/2015/03/01/Building-A-Website-With-Hexo-io/#disqus_thread" class="article-comment-link">Comments</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+      </footer>
+    </div>
+  </article>
+  
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </section>
+  
+
+            </div>
+          </section>
+          <aside id="sidebar">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+  <div class="sidebar-top">
+    <p>follow:</p>
+    <ul class="social-links">
+      
+        <li><a class="social-tooltip" title="twitter" href="https://twitter.com/MichaelArnel"><i id="icon-twitter" class="icon"></i></a></li>
+      
+        <li><a class="social-tooltip" title="facebook" href="https://www.facebook.com/michael.arnel"><i id="icon-facebook" class="icon"></i></a></li>
+      
+        <li><a class="social-tooltip" title="google_plus" href="https://plus.google.com/+MichaelArnel"><i id="icon-google_plus" class="icon"></i></a></li>
+      
+        <li><a class="social-tooltip" title="rss" href="/"><i id="icon-rss" class="icon"></i></a></li>
+      
+    </ul>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/02/21/Hello-World/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Hello-World</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
+  
+  <div class="widgets-container">
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post">
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/03/01/Building-A-Website-With-Hexo-io/" class="thumbnail">
+  
+    <img src="/2015/02/28/Building-A-Website-With-Hexo-io/logo.png
+" alt="Building A Website With Hexo.io" class="thumbnail-image" />
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Web-Development/">Web Development</a></p>
+              <p class="item-title"><a href="/2015/03/01/Building-A-Website-With-Hexo-io/" class="title">Building A Website With Hexo.io</a></p>
+              <p class="item-date"><time datetime="2015-03-01T23:32:45.000Z" itemprop="datePublished">Mar 1 2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/02/21/Hello-World/" class="thumbnail">
+  
+    <img src="/2015/02/21/Hello-World/old-out-new-in.jpg
+" alt="Hello-World" class="thumbnail-image" />
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Web-Development/">Web Development</a></p>
+              <p class="item-title"><a href="/2015/02/21/Hello-World/" class="title">Hello-World</a></p>
+              <p class="item-date"><time datetime="2015-02-22T02:11:04.000Z" itemprop="datePublished">Feb 21 2015</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Development/">Web Development</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: NaNpx;">Hexo</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://hexo.io">Hexo</a>
+          </li>
+        
+          <li>
+            <a href="http://github.com">GitHub</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</aside>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+  
+  <div class="container">
+    <div class="container-inner">
+      <a id="back-to-top" href="javascript:;"><i class="icon" id="icon-angle-up"></i></a>
+      <div class="credit">
+        <h1 class="logo-wrap">
+          <a href="/" class="logo">Michael Arnel</a>
+        </h1>
+        <p>&copy; 2015 Michael Arnel</p>
+        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>, <a href="//pages.github.com/" target="_blank">GitHub Pages</a> Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+<script>
+  var disqus_shortname = 'michaelarnelcom';
+  
+  var disqus_url = 'http://michaelarnel.com/2015/03/01/Building-A-Website-With-Hexo-io/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+<script src="//libs.useso.com/js/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.VMiddleImg.js" type="text/javascript"></script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+
+  <link rel="stylesheet" href="/scrollLoading/style.css" type="text/css">
+
+  <script src="/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
+
+  <script src="/scrollLoading/main.js" type="text/javascript"></script>
+
+
+
+<script src="/js/html-patch.js" type="text/javascript"></script>
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
