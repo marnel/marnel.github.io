@@ -134,6 +134,9 @@ height: 28px;
 background: url(../images/social.png) left top no-repeat;
 margin-right: 8px;
 float: left;
+  line-height: 0; 
+    font-size: 0;
+    color: transparent; 
 }
 
 ul.info li p.social a.fb{
@@ -142,6 +145,9 @@ height: 28px;
 background: url(../images/social.png) -36px top no-repeat;
 float: left;
 margin-right: 8px;
+  line-height: 0; 
+    font-size: 0;
+    color: transparent; 
 }
 
 ul.info li p.social a.li{
@@ -149,6 +155,9 @@ width: 28px;
 height: 28px;
 background: url(../images/social.png) -72px top no-repeat;
 float: left;
+  line-height: 0; 
+    font-size: 0;
+    color: transparent; 
 }
 
 ul.info li p.social a.tw:hover{
